@@ -9,7 +9,30 @@ First, you need to decide how you will implement dependencies. You can use SaveS
  2. Fill the Instances array with all objects that require data to be saved. 
  3. Now go to the scripts whose fields require saving and mark the corresponding fields with the SaveData attribute.
 
-That's the end of it. Now the data is saved using PlayerPrefs. 
+That's the end of it. Now the data is saved using PlayerPrefs.
+
+Also an example of what it would look like in a particular class.
+```csharp
+public class Test : MonoBehaviour
+{
+    [SaveData] public string Value;
+    . . .
+}
+```
+Also, don't forget to download and save data. In its simplest form it can look like this.
+```csharp
+public class SaveController : MonoBehaviour
+{
+    private void Awake()
+    {
+        SaveSystem.OnReady += SaveSystem.Load;
+    }
+    private void OnApplicationQuit()
+    {
+         SaveSystem.Save();
+    }
+}
+```
 
 ## Custom Savers
 If you need to save data to the cloud or through some other framework - write an ISaver wrapper. Here is a sample code for YGPlugin. (this is the built-in functionality)
