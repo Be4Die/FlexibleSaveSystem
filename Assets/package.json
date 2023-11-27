@@ -1,0 +1,23 @@
+{
+	"name": "com.d1d3m.flexiblesavesystem",
+	"version": "1.2.3",
+	"displayName": "Save System",
+	"description": "The library provides a layer of abstractions and implementations needed to implement the save system in the game",
+	"unity": "2019.1",
+	"unityRelease": "0b5",
+	"documentationUrl": "https://github.com/Be4Die/FlexibleSaveSystem/blob/main/README.md",
+	"changelogUrl": "https://example.com/changelog.html",
+	"licensesUrl": "https://github.com/Be4Die/FlexibleSaveSystem",
+	"dependencies": {},
+	"keywords": [
+		"save",
+		"flexible",
+		"saving",
+		"save system"
+	],
+	"author": {
+		"name": "Michael",
+		"email": "misha375375@gmail.com",
+		"url": "https://github.com/Be4Die"
+	}
+}
