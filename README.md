@@ -23,10 +23,16 @@ Also, don't forget to download and save data. In its simplest form it can look l
 ```csharp
 public class SaveController : MonoBehaviour
 {
-    private void Awake()
+    private void OnEnable()
     {
         SaveSystem.OnReady += SaveSystem.Load;
     }
+
+    private void OnDisable()
+    {
+        SaveSystem.OnReady -= SaveSystem.Load;
+    }
+
     private void OnApplicationQuit()
     {
          SaveSystem.Save();
