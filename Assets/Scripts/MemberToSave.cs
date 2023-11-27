@@ -46,7 +46,7 @@ namespace FlexibleSaveSystem
         /// Sets the value of the field.
         /// </summary>
         /// <param name="value">The value to set.</param>
-        public void SetValue(object value) => Field.SetValue(Instance, value);
+        public void SetValue(object value) => Field.SetValue(Instance, Convert.ChangeType(value, Field.FieldType));
 
         /// <summary>
         /// Tries to create members for the specified instance.
